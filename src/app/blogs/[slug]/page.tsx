@@ -43,8 +43,69 @@ const blogData = {
       
       <p>This framework has helped me stay on track with both personal and professional goals, and I'm excited to share it with you.</p>
     `
+  },
+  "resend-18m-series-a": {
+    title: "Resend raises $18M Series A",
+    date: "Dec 4, 2024",
+    content: `
+      <p>Exciting news from the Resend team as we announce our $18M Series A funding round. This milestone represents a significant step forward in our mission to revolutionize email delivery for developers.</p>
+      
+      <p>In this post, I'll share the journey that led us here and what this means for our users and the future of Resend.</p>
+    `
+  },
+  "life-post-yc": {
+    title: "How is life post YC?",
+    date: "Feb 12, 2024",
+    content: `
+      <p>Life after Y Combinator is often romanticized, but the reality is both challenging and rewarding. In this post, I'll share my honest reflections on what it's like to build a company after graduating from YC.</p>
+      
+      <p>From the pressure to perform to the incredible network and opportunities, here's what I've learned about life post YC.</p>
+    `
+  },
+  "10-years-dracula": {
+    title: "Celebrating 10 years of Dracula",
+    date: "Oct 12, 2023",
+    content: `
+      <p>Ten years ago, I created the Dracula theme as a simple color scheme for my terminal. Today, it's used by millions of developers worldwide. This post celebrates the journey and the incredible community that has grown around it.</p>
+      
+      <p>From humble beginnings to a global phenomenon, here's the story of how Dracula became more than just a theme.</p>
+    `
+  },
+  "resend-3m": {
+    title: "Resend raises $3M",
+    date: "Jul 18, 2023",
+    content: `
+      <p>We're thrilled to announce that Resend has raised $3M in seed funding. This investment will help us accelerate our mission to make email delivery simple and reliable for developers.</p>
+      
+      <p>In this post, I'll share what this funding means for our team and our users.</p>
+    `
+  },
+  "waitlist-lessons": {
+    title: "Lessons learned from growing a 6,338 people waitlist in 7 weeks",
+    date: "Feb 21, 2023",
+    content: `
+      <p>Building a waitlist of over 6,000 people in just 7 weeks taught me invaluable lessons about product-market fit, community building, and the power of authentic marketing.</p>
+      
+      <p>In this post, I'll share the strategies that worked, the mistakes I made, and the key insights that helped us achieve this milestone.</p>
+    `
+  },
+  "25000-domain": {
+    title: "Why I spent $25,000 on a domain (or how to pick a startup name)",
+    date: "Feb 6, 2023",
+    content: `
+      <p>Naming a startup is one of the most challenging decisions founders face. In this post, I'll share why I decided to invest $25,000 in a domain name and the thought process behind choosing the right name for your company.</p>
+      
+      <p>From brand considerations to SEO implications, here's everything you need to know about picking a startup name.</p>
+    `
   }
 };
+
+// Generate static paths for all blog posts
+export async function generateStaticParams() {
+  return Object.keys(blogData).map((slug) => ({
+    slug: slug,
+  }));
+}
 
 interface BlogPageProps {
   params: Promise<{

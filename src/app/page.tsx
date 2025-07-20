@@ -12,12 +12,15 @@ export default function Home() {
       <ResponsiveCircles />
       <div className="landing-container">
         <div className="landing-image">
-          <Image
-            src="/lizu.webp" // Replace with your image path
+          <img
+            src="/lizu.webp"
             alt="Elizabeth walking"
-            fill
-            style={{ objectFit: 'cover' }}
-            priority
+            style={{ 
+              width: '100%', 
+              height: '100%', 
+              objectFit: 'cover',
+              borderRadius: '0 30% 30% 30%'
+            }}
           />
         </div>
         <div className="landing-content">
