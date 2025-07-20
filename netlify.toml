@@ -2,6 +2,7 @@
 [build]
   command = "next build"
   publish = ".next"
+  functions = ".netlify/functions"
 
 [[redirects]]
   from = "/*"
