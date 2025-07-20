@@ -47,13 +47,14 @@ const blogData = {
 };
 
 interface BlogPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export default function BlogPage({ params }: BlogPageProps) {
-  const blog = blogData[params.slug as keyof typeof blogData];
+export default async function BlogPage({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const blog = blogData[slug as keyof typeof blogData];
   
   if (!blog) {
     notFound();

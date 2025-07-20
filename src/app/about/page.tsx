@@ -174,13 +174,13 @@ export default function About() {
             <p>
              Seems like I have a flex-col, with some space to fill. So let me introduce you to my Patreon account as a small attempt to 
              monetize my platform.
-             I'm planning to run a blog here, but not sure if I'll be able to keep up. <span className="italic">sigh.</span>
+             I&apos;m planning to run a blog here, but not sure if I&apos;ll be able to keep up. <span className="italic">sigh.</span>
              <br/>
              <br/>
              But as they say,
              <br/>
              <span className="italic text-[22px]">
-             You miss <span className="text-[var(--color-accent)] text-[40px] leading-none">100%</span> of the shots you don't take.
+             You miss <span className="text-[var(--color-accent)] text-[40px] leading-none">100%</span> of the shots you don&apos;t take.
              </span>
              <br/>
              <br/>

@@ -302,7 +302,7 @@ export default function Work() {
             {/* Right: Achievement/Description */}
             <div className="w-1/2 flex flex-col justify-center items-start pl-6 pr-2">
               <span className="text-[#e0e0e0] text-base lg:text-lg font-serif" style={{ fontFamily: 'var(--font-main)' }}>
-                Led product development initiatives and technical implementation for Inflection.io's platform, focusing on scalable solutions and user experience optimization.
+                Led product development initiatives and technical implementation for Inflection.io&apos;s platform, focusing on scalable solutions and user experience optimization.
               </span>
             </div>
           </div>
