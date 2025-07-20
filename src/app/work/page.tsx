@@ -18,9 +18,9 @@ export default function Work() {
         </div>
         
         {/* Scrollable content */}
-        <div className="mt-20 lg:mt-20 w-full px-20 lg:px-30 flex flex-col">
+        <div className="mt-20 lg:mt-20 w-full px-10 xl:px-30 flex flex-col">
           {/* Timeline point 0 - Early Experience */}
-          <div className="relative flex w-full min-h-[100px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -36,7 +36,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 1 - Early Experience */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -52,7 +52,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 2 - Internship */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -69,7 +69,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 3 - Learning Period */}
-          <div className="relative flex w-full min-h-[5px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -85,7 +85,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 4 - Software Engineer */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -102,7 +102,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 5 - Senior Developer */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end">
               <span className="pr-11 text-[25px] font-bold mb-1 font-serif" style={{ fontFamily: 'var(--font-sub)' }}>
@@ -122,7 +122,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 6 - Developer Relations Engineer */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -139,7 +139,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 7 - Technical Lead */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -157,7 +157,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 8 - Engineering Manager */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -174,7 +174,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 9 - Principal Engineer */}
-          <div className="relative flex w-full min-h-[120px] items-center mt-16 mb-16">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center mt-16 mb-16">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6">
               <span className="text-[var(--color-accent)] text-md mb-1 font-serif" style={{ fontFamily: 'var(--font-heading)' }}>
@@ -196,7 +196,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 10 - Frontend Development */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -212,7 +212,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 11 - Data Processing Optimization */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -228,7 +228,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 12 - AWS Lambda & Feature Flags */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -244,7 +244,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 13 - Kafka & gRPC Integration */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -260,7 +260,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 14 - AWS SQS Migration */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -276,7 +276,7 @@ export default function Work() {
           </div>
 
           {/* Timeline point 15 - Code Quality & Ownership */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -292,7 +292,7 @@ export default function Work() {
           </div>
 
           {/* Product Engineer Timeline Section */}
-          <div className="relative flex w-full min-h-[120px] items-center">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6"></div>
             {/* Center: Dot */}
@@ -307,7 +307,7 @@ export default function Work() {
             </div>
           </div>
 
-          <div className="relative flex w-full min-h-[120px] items-center mt-16">
+          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center mt-16">
             {/* Left: Role Info */}
             <div className="w-1/2 flex flex-col items-end pr-6">
               <span className="text-[var(--color-accent)] text-md mb-1 font-serif" style={{ fontFamily: 'var(--font-heading)' }}>

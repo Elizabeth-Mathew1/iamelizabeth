@@ -17,9 +17,9 @@ export default function Home() {
             style={{ 
               width: '100%', 
               height: '100%', 
-              objectFit: 'cover',
-              borderRadius: '0 30% 30% 30%'
+              objectFit: 'cover'
             }}
+            className="lg:rounded-[0_30%_30%_30%]"
           />
         </div>
         <div className="landing-content">
