@@ -3,6 +3,7 @@ import "../../../styles/styles.css";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, markdownToHtml, getAllPosts } from "../../../lib/markdown";
+import MDXContent from "../../../components/MDXContent";
 
 // Generate static paths for all blog posts
 export async function generateStaticParams() {
@@ -25,8 +26,6 @@ export default async function BlogPage({ params }: BlogPageProps) {
   if (!blog) {
     notFound();
   }
-
-  const content = await markdownToHtml(blog.content);
 
   return (
     <div className="page-root">
@@ -70,11 +69,15 @@ export default async function BlogPage({ params }: BlogPageProps) {
           </div>
 
           {/* Blog content */}
-          <div 
-            className="leading-relaxed text-lg md:text-[20px] lg:text-[22px] pb-10 prose prose-invert max-w-none" 
-            style={{ fontFamily: 'var(--font-main)' }}
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
+          {blog.isMDX ? (
+            <MDXContent source={blog.content} />
+          ) : (
+            <div 
+              className="leading-relaxed text-lg md:text-[20px] lg:text-[22px] pb-10 prose prose-invert max-w-none" 
+              style={{ fontFamily: 'var(--font-main)' }}
+              dangerouslySetInnerHTML={{ __html: await markdownToHtml(blog.content) }}
+            />
+          )}
 
         </div>
 

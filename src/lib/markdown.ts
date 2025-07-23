@@ -15,16 +15,18 @@ export interface BlogPost {
   tags?: string[];
   draft: boolean;
   content: string;
+  isMDX?: boolean;
 }
 
 export function getAllPosts(): BlogPost[] {
   // Get file names under /content/blog
   const fileNames = fs.readdirSync(postsDirectory);
   const allPostsData = fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
+    .filter((fileName) => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
     .map((fileName) => {
-      // Remove ".md" from file name to get slug
-      const slug = fileName.replace(/\.md$/, '');
+      // Remove ".md" or ".mdx" from file name to get slug
+      const slug = fileName.replace(/\.(md|mdx)$/, '');
+      const isMDX = fileName.endsWith('.mdx');
 
       // Read markdown file as string
       const fullPath = path.join(postsDirectory, fileName);
@@ -43,6 +45,7 @@ export function getAllPosts(): BlogPost[] {
         tags: matterResult.data.tags || [],
         draft: matterResult.data.draft || false,
         content: matterResult.content,
+        isMDX,
       };
     })
     .filter((post) => !post.draft) // Filter out draft posts
@@ -53,7 +56,15 @@ export function getAllPosts(): BlogPost[] {
 
 export function getPostBySlug(slug: string): BlogPost | null {
   try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    // Try .mdx first, then .md
+    let fullPath = path.join(postsDirectory, `${slug}.mdx`);
+    let isMDX = true;
+    
+    if (!fs.existsSync(fullPath)) {
+      fullPath = path.join(postsDirectory, `${slug}.md`);
+      isMDX = false;
+    }
+    
     const fileContents = fs.readFileSync(fullPath, 'utf8');
 
     // Use gray-matter to parse the post metadata section
@@ -69,6 +80,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       tags: matterResult.data.tags || [],
       draft: matterResult.data.draft || false,
       content: matterResult.content,
+      isMDX,
     };
   } catch (error) {
     console.error(`Error loading post ${slug}:`, error);
