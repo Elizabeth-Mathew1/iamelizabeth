@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import ResponsiveCircles from "../components/ResponsiveCircles";
@@ -11,15 +12,16 @@ export default function Home() {
       <ResponsiveCircles />
       <div className="landing-container">
         <div className="landing-image">
-          <img
+          <Image
             src="/lizu.webp"
             alt="Elizabeth walking"
+            fill
             style={{ 
-              width: '100%', 
-              height: '100%', 
               objectFit: 'cover'
             }}
             className="lg:rounded-[0_30%_30%_30%]"
+            priority
+            unoptimized
           />
         </div>
         <div className="landing-content">

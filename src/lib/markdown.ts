@@ -71,6 +71,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       content: matterResult.content,
     };
   } catch (error) {
+    console.error(`Error loading post ${slug}:`, error);
     return null;
   }
 }
