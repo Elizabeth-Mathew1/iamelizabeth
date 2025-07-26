@@ -2,6 +2,7 @@ import AccentGlow from "../../components/AccentGlow";
 import "../../styles/styles.css";
 import Link from "next/link";
 import { getAllPosts } from "../../lib/markdown";
+import { IoHome } from "react-icons/io5";
 
 export default function Blogs() {
   const blogEntries = getAllPosts();
@@ -13,10 +14,13 @@ export default function Blogs() {
         {/* Fixed left vertical line - shorter, starts from top */}
         <div className="fixed bottom-0 h-[85%] w-[4px] bg-[#F8C306] z-10 lg:left-[100px] 2xl:left-[500px] lg:block hidden"></div>
 
-        <div className="fixed top-0 w-full h-[15%] bg-[var(--color-bg)] lg:block flex items-center">
+        <div className="fixed top-0 w-full h-[15%] bg-[var(--color-bg)] flex items-center justify-between">
           <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-[80px] lg:pl-[180px] 2xl:pl-[650px]" style={{ fontFamily: 'var(--font-main)' }}>
             -BLOGS
           </div>
+          <Link href="/" className="mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
+            <IoHome className="w-6 h-6 text-[var(--color-accent)]" />
+          </Link>
         </div>
 
         {/* Scrollable content */}

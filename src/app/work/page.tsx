@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AccentGlow from "../../components/AccentGlow";
 import "../../styles/styles.css";
+import { IoHome } from "react-icons/io5";
 
 export default function Work() {
   return (
@@ -11,10 +12,13 @@ export default function Work() {
         <div className="fixed top-0 bottom-0 left-1/2 w-[4px] bg-[var(--color-accent)] z-30 transform -translate-x-1/2"></div>
         
         {/* Fixed header */}
-        <div className="fixed top-0 w-full h-[10%] bg-[var(--color-bg)] lg:block flex items-center z-20">
+        <div className="fixed top-0 w-full h-[10%] bg-[var(--color-bg)] flex items-center justify-between z-20">
           <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-[80px] lg:pl-[180px] 2xl:pl-[650px] font-serif" style={{ fontFamily: 'var(--font-main)' }}>
             -WORK
           </div>
+          <Link href="/" className="mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
+            <IoHome className="w-6 h-6 text-[var(--color-accent)]" />
+          </Link>
         </div>
         
         {/* Scrollable content */}

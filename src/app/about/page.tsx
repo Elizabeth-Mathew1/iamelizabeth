@@ -3,6 +3,8 @@ import SectionHeader from "./SectionHeader";
 import ImageWithCaption from "../../components/ImageWithCaption";
 import "../../styles/styles.css";
 import Link from "next/link";
+import { IoHome } from "react-icons/io5";
+import { FiLink } from "react-icons/fi";
 
 export default function About() {
   return (
@@ -12,10 +14,13 @@ export default function About() {
         {/* Fixed left vertical line - shorter, starts from top */}
         <div className="fixed bottom-0 h-[85%] w-[4px] bg-[#F8C306] z-10 lg:left-[100px] 2xl:left-[500px] lg:block hidden"></div>
 
-        <div className="fixed top-0 w-full h-[15%] bg-[var(--color-bg)] lg:block flex items-center">
+        <div className="z-20 fixed top-0 w-full h-[15%] bg-[var(--color-bg)] flex items-center justify-between">
             <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-[80px] lg:pl-[180px] 2xl:pl-[650px]" style={{ fontFamily: 'var(--font-main)' }}>
               -ABOUT
             </div>
+            <Link href="/" className="mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
+              <IoHome className="w-6 h-6 text-[var(--color-accent)]" />
+            </Link>
           </div>
          {/* Scrollable content */}
         <div className="mt-30 xl:mt-20 2xl:mt-35 overflow-y-auto max-w-6xl mx-[80px] lg:mx-[180px] 2xl:mx-[650px]">
@@ -83,11 +88,14 @@ export default function About() {
         </div>
 
 
-        <SectionHeader 
-        title="me + your org = 🔥"
-        accentText = "Pitching myself. Humbly."/>
+        <div id="pitch" className="scroll-mt-20">
+          <SectionHeader 
+          title="me + your org = 🔥"
+          accentText = "Pitching myself. Humbly."
+          showLinkIcon={true}
+          linkId="pitch"/>
 
-        <div className="leading-relaxed text-lg md:text-[20px] lg:text-[21px] pb-12" style={{ fontFamily: 'var(--font-main)' }}>
+          <div className="leading-relaxed text-lg md:text-[20px] lg:text-[21px] pb-12" style={{ fontFamily: 'var(--font-main)' }}>
           I&apos;m a developer, who codes and builds things. I&apos;m a great communicator, who loves to write and speak. I&apos;ve improved reduced AWS costs by 10% in my previous org and optimised architectures for messaging queues.
           I was a part of a deep tech blog that went viral on Hacker News generating a traffic of 15.34K till date. I learned all about MCP servers and made a POC MCP server for my org in roughly 2 days.
           <br/>
@@ -118,6 +126,7 @@ export default function About() {
           , and see all my other ✨
           <span className="italic"> amazing brags </span>
           ✨.
+          </div>
         </div>
 
         <SectionHeader
