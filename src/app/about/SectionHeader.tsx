@@ -14,17 +14,55 @@ interface SectionHeaderProps {
 export default function SectionHeader({ title, accentText, isAccent = false, showLinkIcon = false, linkId }: SectionHeaderProps) {
   const [copied, setCopied] = useState(false);
 
-  const copyLink = async () => {
-    if (linkId) {
+  const copyLink = () => {
+    if (linkId && typeof window !== 'undefined') {
       const url = `${window.location.origin}${window.location.pathname}#${linkId}`;
+      
+      // Use a try-catch block to handle potential errors
       try {
-        await navigator.clipboard.writeText(url);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1200);
+        // Check if clipboard API is available
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(url)
+            .then(() => {
+              setCopied(true);
+              setTimeout(() => setCopied(false), 1200);
+            })
+            .catch((err) => {
+              console.error('Failed to copy link:', err);
+              // Fallback for older browsers
+              fallbackCopyTextToClipboard(url);
+            });
+        } else {
+          // Fallback for non-secure contexts or older browsers
+          fallbackCopyTextToClipboard(url);
+        }
       } catch (err) {
         console.error('Failed to copy link:', err);
+        fallbackCopyTextToClipboard(url);
       }
     }
+  };
+
+  // Fallback copy function for older browsers
+  const fallbackCopyTextToClipboard = (text: string) => {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.left = '-999999px';
+    textArea.style.top = '-999999px';
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+    
+    try {
+      document.execCommand('copy');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1200);
+    } catch (err) {
+      console.error('Fallback copy failed:', err);
+    }
+    
+    document.body.removeChild(textArea);
   };
 
   return (

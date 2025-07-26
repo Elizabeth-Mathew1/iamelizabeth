@@ -186,6 +186,7 @@ a {
 }
 
 .blog-entry h2 {
+  font-family: var(--font-sub);
   transition: color 0.2s ease-in-out;
 }
 
@@ -213,7 +214,8 @@ a {
 .prose h5,
 .prose h6 {
   color: var(--color-text);
-  font-family: var(--font-heading);
+  font-family: var(--font-main);
+  font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
 }

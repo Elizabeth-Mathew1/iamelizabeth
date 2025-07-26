@@ -14,6 +14,7 @@ export interface BlogPost {
   excerpt?: string;
   tags?: string[];
   draft: boolean;
+  pinned?: boolean;
   content: string;
   isMDX?: boolean;
 }
@@ -44,6 +45,7 @@ export function getAllPosts(): BlogPost[] {
         excerpt: matterResult.data.excerpt,
         tags: matterResult.data.tags || [],
         draft: matterResult.data.draft || false,
+        pinned: matterResult.data.pinned || false,
         content: matterResult.content,
         isMDX,
       };
@@ -79,6 +81,7 @@ export function getPostBySlug(slug: string): BlogPost | null {
       excerpt: matterResult.data.excerpt,
       tags: matterResult.data.tags || [],
       draft: matterResult.data.draft || false,
+      pinned: matterResult.data.pinned || false,
       content: matterResult.content,
       isMDX,
     };

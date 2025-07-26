@@ -2,15 +2,15 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const socials = [
   {
-    href: "https://github.com/yourusername",
+    href: "https://github.com/Elizabeth-Mathew1",
     label: "GitHub",
   },
   {
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/elizabeth-mathew-4063b5195/",
     label: "LinkedIn",
   },
   {
-    href: "https://twitter.com/yourusername",
+    href: "https://x.com/elizabethmm_",
     label: "Twitter",
   },
 ];

@@ -3,9 +3,30 @@ import "../../styles/styles.css";
 import Link from "next/link";
 import { getAllPosts } from "../../lib/markdown";
 import { IoHome } from "react-icons/io5";
+import { HiHeart } from "react-icons/hi2";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Elza's blog",
+  description: "Sometimes I write.. Trying to sharpen the right side of my brain.",
+  openGraph: {
+    title: "Blog | Elizabeth",
+    description: "Sometimes I write.. Trying to sharpen the right side of my brain.",
+  },
+};
 
 export default function Blogs() {
   const blogEntries = getAllPosts();
+
+  // Sort: pinned first, then by date (already sorted by date in getAllPosts)
+  const sortedEntries = [...blogEntries].sort((a, b) => {
+    // First sort by pinned status (pinned posts first)
+    if (a.pinned && !b.pinned) return -1;
+    if (!a.pinned && b.pinned) return 1;
+    
+    // Then sort by date (recent to oldest)
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
 
   return (
     <div className="page-root">
@@ -24,25 +45,34 @@ export default function Blogs() {
         </div>
 
         {/* Scrollable content */}
-        <div className="mt-30 xl:mt-30 2xl:mt-45 overflow-y-auto max-w-4xl mx-auto px-8">
-          
+        <div className="mt-30 xl:mt-30 2xl:mt-45 overflow-y-auto max-w-10xl mx-auto">
           <div className="mb-20">
             <div className="mb-2 text-[40px] md:text-[50px] lg:text-[70px] text-[var(--color-text)]" style={{ fontFamily: 'var(--font-heading)' }}>
               Sometimes I <span className="text-[var(--color-accent)]">write..</span>
             </div>
             <div className="mt-0 text-[18px] md:text-[22px]" style={{ fontFamily: 'var(--font-main)' }}>
-              Just a girl writing her heart out.
+            <div className="flex gap-2 text-[22px] ">
+            <span style={{ fontFamily: 'var(--font-main)' }}>
+               if it's
+              </span>
+              <HiHeart className="text-red-500 text-[25px]" />
+              <span style={{ fontFamily: 'var(--font-main)' }}>
+                'ed, then it's a favorite.
+              </span>
+            </div>
             </div>
           </div>
 
+
           {/* Blog entries list */}
-          <div className="space-y-0 max-w-2xl mx-auto">
-            {blogEntries.map((blog, index) => (
+          <div className="space-y-0 max-w-10xl ">
+            {sortedEntries.map((blog, index) => (
               <div key={blog.slug}>
                 <Link href={`/blogs/${blog.slug}`}>
-                  <div className="blog-entry group py-4 px-4 rounded-lg cursor-pointer">
+                  <div className="blog-entry group py-4 rounded-lg cursor-pointer px-4">
                     <div className="flex justify-between items-center">
-                      <h2 className="text-[18px] md:text-[20px] lg:text-[22px] text-[var(--color-text)]" style={{ fontFamily: 'var(--font-main)' }}>
+                      <h2 className="text-[18px] md:text-[20px] lg:text-[22px] text-[var(--color-text)] flex items-center gap-2" style={{ fontFamily: 'var(--font-main)' }}>
+                        {blog.pinned && <HiHeart className="inline-block text-red-500 text-[30px] pb-1" title="Pinned" />}
                         {blog.title}
                       </h2>
                       <span className="text-[16px] md:text-[18px] text-gray-400" style={{ fontFamily: 'var(--font-main)' }}>
@@ -55,7 +85,7 @@ export default function Blogs() {
                     </div>
                   </div>
                 </Link>
-                {index < blogEntries.length - 1 && (
+                {index < sortedEntries.length - 1 && (
                   <div className="h-[1px] bg-gray-700 mx-4"></div>
                 )}
               </div>
