@@ -4,7 +4,6 @@ import ImageWithCaption from "../../components/ImageWithCaption";
 import "../../styles/styles.css";
 import Link from "next/link";
 import { IoHome } from "react-icons/io5";
-import { FiLink } from "react-icons/fi";
 
 export default function About() {
   return (
