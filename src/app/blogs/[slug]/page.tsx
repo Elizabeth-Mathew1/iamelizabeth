@@ -38,6 +38,22 @@ export async function generateMetadata({ params }: BlogPageProps): Promise<Metad
     openGraph: {
       title: `${blog.title} | Elizabeth`,
       description: blog.excerpt || `Blog post by Elizabeth: ${blog.title}`,
+      images: [
+        {
+          url: blog.featured_image || '/lizu.webp',
+          width: 1200,
+          height: 630,
+          alt: blog.title,
+        },
+      ],
+      type: 'article',
+      publishedTime: blog.date,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${blog.title} | Elizabeth`,
+      description: blog.excerpt || `Blog post by Elizabeth: ${blog.title}`,
+      images: [blog.featured_image || '/lizu.webp'],
     },
   };
 }

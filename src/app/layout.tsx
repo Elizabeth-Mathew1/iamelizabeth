@@ -16,9 +16,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Elza's blog",
   description: "Personal website and blog of Elizabeth",
-  icons: {
-    icon: '/icon.png',
+    icons: {
+      icon: '/icon.png',
+    },
+  openGraph: {
+    title: "Elza's blog",
+    description: "Personal website and blog of Elizabeth",
+    images: [
+      {
+        url: '/lizu.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Elizabeth',
+      },
+    ],
+    type: 'website',
   },
+  
 };
 
 export default function RootLayout({
