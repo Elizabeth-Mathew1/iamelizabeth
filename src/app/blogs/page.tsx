@@ -53,11 +53,11 @@ export default function Blogs() {
             <div className="mt-0 text-[18px] md:text-[22px]" style={{ fontFamily: 'var(--font-main)' }}>
             <div className="flex gap-2 text-[22px] ">
             <span style={{ fontFamily: 'var(--font-main)' }}>
-               if it's
+               if it&apos;s
               </span>
               <HiHeart className="text-red-500 text-[25px]" />
               <span style={{ fontFamily: 'var(--font-main)' }}>
-                'ed, then it's a favorite.
+                &apos;ed, then it&apos;s a favorite.
               </span>
             </div>
             </div>
