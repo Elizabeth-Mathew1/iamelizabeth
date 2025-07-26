@@ -41,13 +41,13 @@ export default function SectionHeader({ title, accentText, isAccent = false, sho
             >
               {copied && (
                 <span
-                  className="absolute right-10 top-1/2 bg-[var(--color-bg)] text-[var(--color-accent)] text-[16px] px-2 py-1 rounded shadow transition-opacity duration-200 z-30"
+                  className="absolute right-10 top-1/2 text-[var(--color-accent)] text-[16px] px-2 py-1 z-30"
                   style={{ fontFamily: 'var(--font-main)' }}
                 >
                   Copied!
                 </span>
               )}
-              <FiLink className="w-6 h-6 text-[var(--color-accent)]" />
+              <FiLink className="w-6 h-6 text-[var(--color-accent)] opacity-50 hover:opacity-100 transition-opacity duration-200" />
             </button>
           </div>
         )}
