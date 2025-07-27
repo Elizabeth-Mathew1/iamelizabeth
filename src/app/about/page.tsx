@@ -14,15 +14,15 @@ export default function About() {
         <div className="fixed bottom-0 h-[85%] w-[4px] bg-[#F8C306] z-10 lg:left-[100px] 2xl:left-[500px] lg:block hidden"></div>
 
         <div className="z-20 fixed top-0 w-full h-[15%] bg-[var(--color-bg)] flex items-center justify-between">
-            <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-[40px] lg:pl-[180px] 2xl:pl-[650px]" style={{ fontFamily: 'var(--font-main)' }}>
+            <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-4 md:pl-[40px] lg:pl-[180px] 2xl:pl-[650px]" style={{ fontFamily: 'var(--font-main)' }}>
               -ABOUT
             </div>
-            <Link href="/" className="mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
+            <Link href="/" className="mr-4 md:mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
               <IoHome className="w-6 h-6 text-[var(--color-accent)]" />
             </Link>
           </div>
          {/* Scrollable content */}
-        <div className="mt-30 xl:mt-20 2xl:mt-35 overflow-y-auto max-w-6xl mx-[80px] lg:mx-[180px] 2xl:mx-[650px]">
+        <div className="mt-30 xl:mt-20 2xl:mt-35 overflow-y-auto max-w-6xl mx-4 md:mx-[80px] lg:mx-[180px] 2xl:mx-[650px] px-4 md:px-8">
           
           <SectionHeader 
             title="I could write a book.."

@@ -13,16 +13,16 @@ export default function Work() {
         
         {/* Fixed header */}
         <div className="fixed top-0 w-full h-[10%] bg-[var(--color-bg)] flex items-center justify-between z-20">
-          <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-[80px] lg:pl-[180px] 2xl:pl-[650px] font-serif" style={{ fontFamily: 'var(--font-main)' }}>
+          <div className="text-[20px] md:text-[22px] text-[var(--color-accent)] mt-4 pl-4 md:pl-[80px] lg:pl-[180px] 2xl:pl-[650px] font-serif" style={{ fontFamily: 'var(--font-main)' }}>
             -WORK
           </div>
-          <Link href="/" className="mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
+          <Link href="/" className="mr-4 md:mr-[80px] lg:mr-[180px] 2xl:mr-[650px] mt-4 hover:opacity-80 transition-opacity flex items-center">
             <IoHome className="w-6 h-6 text-[var(--color-accent)]" />
           </Link>
         </div>
         
         {/* Scrollable content */}
-        <div className="mt-20 lg:mt-20 w-full px-10 xl:px-30 flex flex-col">
+        <div className="mt-20 lg:mt-20 w-full px-4 md:px-10 xl:px-30 flex flex-col">
           {/* Timeline point 0 - Early Experience */}
           <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
             {/* Left: Role Info */}
