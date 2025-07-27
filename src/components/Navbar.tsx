@@ -3,10 +3,10 @@ import Link from "next/link";
 import { useState } from "react";
 
 const navItems = [
-  { label: "About", href: "/about", message: "Learn more about me" },
-  { label: "Blogs", href: "/blogs", message: "Read my thoughts" },
-  { label: "Work", href: "/work", message: "See my projects" },
-  { label: "Resume", href: "/resume.pdf", message: "Download my resume", external: true },
+  { label: "About", href: "/about", message: "More than 1000 plus words about myself." },
+  { label: "Blogs", href: "/blogs", message: "A very humble attempt to blog." },
+  { label: "Work", href: "/work", message: "A timeline of my work." },
+  { label: "Resume", href: "https://drive.google.com/file/d/1W8dGGLNV0Jr_u0be9JjnI-obX-_wU9HZ/view?usp=sharing", message: "My resume!", external: true },
 ];
 
 export default function Navbar() {

@@ -2,11 +2,33 @@ import Link from "next/link";
 import AccentGlow from "../../components/AccentGlow";
 import "../../styles/styles.css";
 import { IoHome } from "react-icons/io5";
+import { TbFaceIdError } from "react-icons/tb";
 
 export default function Work() {
   return (
     <div className="page-root">
       <AccentGlow />
+      {/* Mobile overlay message */}
+      <div className="fixed inset-0 bg-[var(--color-bg)] z-50 flex items-center justify-center px-8 md:hidden">
+        <div className="text-center">
+          <div className="text-[var(--color-accent)] opacity-50 text-[100px] mb-4 flex justify-center" style={{ fontFamily: 'var(--font-heading)' }}>
+            <TbFaceIdError />
+          </div>
+          <div className="text-[var(--color-text)] text-[22px] mb-2" style={{ fontFamily: 'var(--font-main)' }}>
+            This is a timeline view
+          </div>
+          <div className="text-[var(--color-text)] text-[22px] mb-4" style={{ fontFamily: 'var(--font-main)' }}>
+            and can be seen in its full glory
+          </div>
+          <div className="text-[var(--color-accent)] text-[22px] mb-20" style={{ fontFamily: 'var(--font-main)' }}>
+            only on bigger screens, sorry!
+          </div>
+          <Link href="/" className="flex items-center justify-center w-full text-[var(--color-accent)] hover:opacity-80 transition-opacity">
+            <IoHome className="w-6 h-6 text-[var(--color-accent)]" />
+          </Link>
+        </div>
+      </div>
+
       <div className="flex min-h-screen w-screen bg-[var(--color-bg)] relative">
         {/* Fixed center timeline */}
         <div className="fixed top-0 bottom-0 left-1/2 w-[4px] bg-[var(--color-accent)] z-30 transform -translate-x-1/2"></div>
@@ -71,22 +93,7 @@ export default function Work() {
               </span>
             </div>
           </div>
-
-          {/* Timeline point 3 - Learning Period */}
-          <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">
-            {/* Left: Role Info */}
-            <div className="w-1/2 flex flex-col items-end pr-6"></div>
-            {/* Center: Dot */}
-            <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-              <div className="w-6 h-6 bg-[var(--color-accent)] rounded-full z-30 border-4 border-[var(--color-bg)]"></div>
-            </div>
-            {/* Right: Achievement/Description */}
-            <div className="w-1/2 flex flex-col justify-center items-start pl-6">
-              <span className="text-[#e0e0e0] text-base lg:text-lg font-serif" style={{ fontFamily: 'var(--font-main)' }}>
-                Consistent efforts and campaigns lead to driving <span style={{ color: 'var(--color-accent)' }}>40+</span> signups [<span style={{ color: 'var(--color-accent)' }}>20+ ICPs</span>] per month from <span style={{ color: 'var(--color-accent)' }}>Reddit</span>.
-              </span>
-            </div>
-          </div>
+          
 
           {/* Timeline point 4 - Software Engineer */}
           <div className="relative flex w-full min-h-[200px] md:min-h-[150px] items-center">

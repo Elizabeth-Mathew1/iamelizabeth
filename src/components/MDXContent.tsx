@@ -3,6 +3,7 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import CalloutBox from './CalloutBox';
+import VideoEmbed from './VideoEmbed';
 
 interface ImageProps {
   src: string;
@@ -30,6 +31,18 @@ const components = {
     </div>
   ),
   CalloutBox,
+  VideoEmbed,
+  a: ({ href, children, ...props }: any) => (
+    <a 
+      href={href} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="text-[var(--color-accent)] underline hover:opacity-80 transition-opacity"
+      {...props}
+    >
+      {children}
+    </a>
+  ),
   // Add more custom components as needed
 };
 

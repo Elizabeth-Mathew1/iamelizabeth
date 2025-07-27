@@ -108,7 +108,7 @@ export default function About() {
           <br/>
           <br/>
            No, I am not highly passionate about what I do. Yep, I do it cuz it pays me enough to fund my prospects. But I own my tasks from ideation to distribution to monitoring stats.
-           I fix issuses before you catch them. You&apos;re not have to look at my work for errs, instead I hope I can look upto you and learn from you. Sometimes, I mess things up, but that happens only
+           I fix issuses before you catch them. You don&apos;t have to look at my work for errs, instead I hope I can look upto you and learn from you. Sometimes, I mess things up, but that happens only
            once in history. I don&apos;t repeat my mistakes (I really try my best). I&apos;ll help you grow your company, one step at a time (0&#8594;1 and 1&#8594;100). Tasks will be completed before the deadline. Always. I hit targets one 
            after the other, as much as my potential lets me.
 
