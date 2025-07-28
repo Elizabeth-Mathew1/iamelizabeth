@@ -32,7 +32,7 @@ const components = {
   ),
   CalloutBox,
   VideoEmbed,
-  a: ({ href, children, ...props }: any) => (
+  a: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
     <a 
       href={href} 
       target="_blank" 
