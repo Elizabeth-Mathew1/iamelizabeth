@@ -292,3 +292,31 @@ a {
   padding: 0;
 }
 
+/* Override prose blockquote styling for custom Quote component */
+.prose blockquote {
+  border-left-color: white !important;
+  color: white !important;
+}
+
+.prose blockquote * {
+  color: white !important;
+}
+
+/* More specific overrides for Quote component */
+.prose blockquote.border-white {
+  border-left-color: white !important;
+  color: white !important;
+}
+
+.prose blockquote.border-white * {
+  color: white !important;
+}
+
+/* Force white color for all blockquotes in prose */
+.prose blockquote,
+.prose blockquote p,
+.prose blockquote span,
+.prose blockquote div {
+  color: white !important;
+}
+

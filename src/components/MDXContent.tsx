@@ -4,6 +4,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import Image from 'next/image';
 import CalloutBox from './CalloutBox';
 import VideoEmbed from './VideoEmbed';
+import Quote from './Quote';
 
 interface ImageProps {
   src: string;
@@ -32,6 +33,7 @@ const components = {
   ),
   CalloutBox,
   VideoEmbed,
+  Quote,
   a: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: unknown }) => (
     <a 
       href={href} 
