@@ -22,7 +22,7 @@ export default function About() {
             </Link>
           </div>
          {/* Scrollable content */}
-        <div className="mt-30 xl:mt-20 2xl:mt-35 overflow-y-auto max-w-6xl mx-4 md:mx-[80px] lg:mx-[180px] 2xl:mx-[650px] px-4 md:px-8">
+        <div className="mt-30 xl:mt-20 2xl:mt-40 overflow-y-auto max-w-6xl mx-4 md:mx-[80px] lg:mx-[180px] 2xl:mx-[650px] px-4 md:px-8">
           
           <SectionHeader 
             title="I could write a book.."

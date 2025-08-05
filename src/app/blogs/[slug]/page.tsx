@@ -88,7 +88,7 @@ export default async function BlogPage({ params }: BlogPageProps) {
         
 
           {/* Blog header */}
-          <div className="mb-10 mt-10">
+          <div className="mb-10 mt-10 2xl:mt-20">
             <h1 className="text-[40px] md:text-[50px] lg:text-[60px] text-[var(--color-text)] mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
               {blog.title}
             </h1>
